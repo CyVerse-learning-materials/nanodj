@@ -83,12 +83,12 @@ Input and example data
         - Jupyter notebooks 
       - Input data can be a list of FAST5 files from previous basecalled runs (e.g. a Metrichor output) or event
         level signal data to be basecalled using the latest ONT caller
-      - E.coli (iplantcollaborative > example_data > nanodj and select nanodj_notebooks folder)
+      - ``data_transfer.sh`` (iplantcollaborative > example_data > nanodj and select ``data_transfer.sh`` script)
 
 -----
 
-*Get started: Launch JupyterLab-QIIME2*
----------------------------------------
+*Get started: Launch NanoDJ*
+-----------------------------
 
 1. Login to the |discovery_enviornment|.
 
@@ -96,9 +96,9 @@ Input and example data
 
 3. Under “Analysis Name” leave the defaults or make any desired notes.
 
-4. Under “Parameters” for ‘Input folder', you'll see that the nanodj_notebooks folder has been prefiled for you.
+4. Under “Parameters” for ‘Input files', click the "+" and browse ``data_transfer.sh`` (iplantcollaborative > example_data > nanodj and select ``data_transfer.sh`` script).
 
-5. Click **Launch Analysis**. You will receive a notification that the job has been submitted and running with the "Access your running analysis here". 
+5. Click **Launch Analysis**. You will receive couple of notifications on the bell corresponding to job submission and running with the "Access your running analysis here". 
 
 .. Tip::
 
@@ -110,13 +110,15 @@ Input and example data
 
   You will be asked to authenticate again to the JupyterLab with your CyVerse username and password
 
-7. You will see the input data under "vice" folder of the JuptyerLab. Now you can upload your own Jupyter Notebook or create one using one of the available kernels
+7. Open the Terminal in the main JupyterLab interface (under 'others' section), navigate to the ``vice`` folder and execute the ``data_transfer.sh`` script to initiate the test data downloading process. You will be asked to enter your CyVerse password again to initiate the downloading process.
 
-.. warning::
+.. code-block:: bash
 
-  Do not create or store any outputs inside the input folder (nanodj_notebooks) as those outputs are not brought back to the Datastore after the analysis.
+  cd vice
+  bash data_transfer.sh
+  Enter your current iRODS password:
 
-8. Finally, once you finish analysis, navigate to the Discovery Environment tab, select the Analysis window and select the analysis, click "save and complete analysis". Upon clicking complete analysis, the analysis will be completed and all the outputs will be brought back to the analysis folder.
+8. Finally, once you finish analysis, navigate to the Discovery Environment tab, select the Analysis window and select the analysis, click "save and complete analysis". Upon clicking complete analysis, the analysis will be completed and all the outputs will be brought back to the analysis folder. Alternatively you can use ``iput`` command to transfer the data back to the data store.
 
 ----
 
@@ -143,7 +145,7 @@ Additional information, help
 `Learning Center Home`_
 
 .. |nanodj logo| image:: ./img/vice_badge.png
-.. _nanodj logo: https://de.cyverse.org/de/?type=apps&app-id=a1d79b6c-5a7a-11e9-b58d-008cfa5ae621&system-id=de
+.. _nanodj logo: https://de.cyverse.org/de/?type=apps&app-id=b0e5bdc4-6226-11e9-a28f-008cfa5ae621&system-id=de
 
 .. |CyVerse logo| image:: ./img/cyverse_rgb.png
     :width: 500
