@@ -83,7 +83,7 @@ Input and example data
         - Jupyter notebooks 
       - Input data can be a list of FAST5 files from previous basecalled runs (e.g. a Metrichor output) or event
         level signal data to be basecalled using the latest ONT caller
-      - ``data_transfer.sh`` (iplantcollaborative > example_data > nanodj and select ``data_transfer.sh`` script)
+      - ``data_transfer.sh`` (Community Data -> iplantcollaborative -> example_data -> nanodj and select ``data_transfer.sh`` script)
 
 -----
 
@@ -94,15 +94,15 @@ Input and example data
 
 2. Click on **Apps** window in the DE workspace and search for and run NanoDJ.
 
+.. Tip::
+
+  Alternatively you can clik this |nanodj logo|_ button to directly launch the NanoDJ VICE app.
+
 3. Under “Analysis Name” leave the defaults or make any desired notes.
 
 4. Under “Parameters” for ‘Input files', click the "+" and browse ``data_transfer.sh`` (iplantcollaborative > example_data > nanodj and select ``data_transfer.sh`` script).
 
 5. Click **Launch Analysis**. You will receive couple of notifications on the bell corresponding to job submission and running with the "Access your running analysis here". 
-
-.. Tip::
-
-  Alternatively you can clik this |nanodj logo|_ to directly launch the NanoDJ VICE app in DE.
 
 6. Clicking on the "Access your running analysis" will open the NanoDJ JupyterLab in another tab in the browser after a brief building phase.
 
