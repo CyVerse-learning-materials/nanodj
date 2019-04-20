@@ -124,12 +124,18 @@ Input and example data
   bash data_transfer.sh
   Enter your current iRODS password:
 
-8. Finally, once you finish analysis, navigate to the Discovery Environment tab, select the Analysis window and select the analysis, click "save and complete analysis". Upon clicking complete analysis, the analysis will be completed and all the outputs will be brought back to the analysis folder. Alternatively you can use ``iput`` command to transfer the data back to the data store.
+8. Finally, once you finish analysis, navigate to the Discovery Environment tab, select the Analysis window and select the analysis, click "save and complete analysis". Upon clicking complete analysis, the analysis will be completed and all the outputs will be brought back to the analysis folder. Alternatively you can use ``iput -rPVT <folder name>`` command to transfer the data back to the data store.
+
+.. Note::
+  
+  Currently quick starts uses a reduced test data but if you want to try the full test data, then instead of using ``data_transfer.sh``, use ``data_transfer_full.sh`` script which is in the same folder as the other script.
 
 ----
 
 Additional information, help
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Full materials for the webinar is available `here <https://wiki.cyverse.org/wiki/pages/viewpage.action?pageId=45322621>`_
+
 - See the original `JupyterLab quick start <https://learning.cyverse.org/projects/vice/en/latest/user_guide/quick-jupyter.html>`_ 
 
 - See the original `NanoDJ <https://github.com/genomicsITER/NanoDJ>`_ for how to run ONT data analysis
