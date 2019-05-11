@@ -148,7 +148,7 @@ Additional information, help
 
 **Fix or improve this documentation**
 
-- On Github: `Repo link <https://github.com/CyVerse-learning-materials/fastqc_quickstart>`_
+- On Github: `Repo link <https://github.com/CyVerse-learning-materials/nanodj>`_
 - Send feedback: `Tutorials@CyVerse.org <Tutorials@CyVerse.org>`_
 
 ----
