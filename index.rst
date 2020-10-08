@@ -1,4 +1,7 @@
-|CyVerse logo|_
+.. include:: cyverse_rst_defined_substitutions.txt
+.. include:: custom_urls.txt
+
+|CyVerse_logo|_
 
 |Home_Icon|_
 `Learning Center Home <http://learning.cyverse.org/>`_
@@ -9,7 +12,7 @@ Quick start of NanoDJ VICE app in DE
 Goal
 ----
 
-`NanoDJ <https://github.com/genomicsITER/NanoDJ/>`_ is a Dockerized Jupyter Notebook for interactive Oxford Nanopore MinION sequence manipulation and genome assembly. It integrates basecalling, read trimming and quality control, simulation and plotting routines with a variety of widely used aligners and assemblers, including procedures for hybrid assembly.
+|Nano DJ| is a Dockerized Jupyter Notebook for interactive Oxford Nanopore MinION sequence manipulation and genome assembly. It integrates basecalling, read trimming and quality control, simulation and plotting routines with a variety of widely used aligners and assemblers, including procedures for hybrid assembly.
 
 - Facilitate ONT sequence analyses by integrating capabilities for data manipulation, sequence comparison and assembly in field experiments or for educational purposes.
 
@@ -19,13 +22,25 @@ Goal
 
 In this quick start, we will show you how to launch NanoDJ VICE app in DE.
 
-.. raw:: html
-
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-        <iframe src="https://www.youtube.com/embed/TYXcEsCWGI0" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-    </div>
+|nanodj webinar|
   
 ----
+
+Manual Maintainer(s)
+------------------------
+
+Who to contact if this manual needs fixing. You can also email
+`Tutorials@CyVerse.org <Tutorials@CyVerse.org>`_
+
+.. list-table::
+    :header-rows: 1
+
+    * - Maintainer
+      - Institution
+      - Contact
+   * - Amanda Cooksey
+      - CyVerse / UA
+      - amandamcooksey@gmail.com
 
 Prerequisites
 -------------
@@ -35,15 +50,15 @@ Downloads, access, and services
 
 *In order to complete this tutorial you will need access to the following services/software*
 
-	.. list-table::
-	    :header-rows: 1
+.. list-table::
+    :header-rows: 1
 
-	    * - Prerequisite
-	      - Preparation/Notes
-	      - Link/Download
-	    * - CyVerse account
-	      - You will need a CyVerse account to complete this exercise
-	      - `Register <https://user.cyverse.org/>`_
+    * - Prerequisite
+      - Preparation/Notes
+      - Link/Download
+    * - CyVerse account
+      - You will need a CyVerse account to complete this exercise
+      - |CyVerse User Portal|
 
 ----
 
@@ -62,9 +77,9 @@ Platform(s)
       - Learning Center Docs
     * - Discovery Environment
       - Web/Point-and-click
-      - `Discovery Environment <https://de.cyverse.org/de/>`_
-      - `DE Manual <https://wiki.cyverse.org/wiki/display/DEmanual/Table+of+Contents>`_
-      - `Guide <https://learning.cyverse.org/projects/discovery-environment-guide/en/latest/>`__
+      - |Discovery Environment|
+      - |DE Manual|
+      - |Discovery Environment Guide|
 
 ----
 
@@ -85,38 +100,34 @@ Input and example data
       - Preparation/Notes
       - Example Data
     * - Fast5 and Jupyter notebooks
-      - - `Fast5 <http://bioinformatics.cvr.ac.uk/blog/exploring-the-fast5-format/>`_
+      - - |fast5|
         - Jupyter notebooks 
       - Input data can be a list of FAST5 files from previous basecalled runs (e.g. a Metrichor output) or event
         level signal data to be basecalled using the latest ONT caller
-      - ``data_transfer.sh`` (Community Data -> iplantcollaborative -> example_data -> nanodj and select ``data_transfer.sh`` script)
+      - Community Data > cyverse_training > quickstarts > nanodj
 
 -----
 
 *Get started: Launch NanoDJ*
 -----------------------------
 
-1. Login to the |discovery_enviornment|.
+1. Login to the |Discovery Environment|.
 
 2. Click on **Apps** window in the DE workspace and search for and run NanoDJ.
 
 .. Tip::
 
-  Alternatively you can clik this |nanodj logo|_ button to directly launch the NanoDJ VICE app.
+  Alternatively you can clik this |nanodj launch| button to directly launch the NanoDJ VICE app.
 
 3. Under “Analysis Name” leave the defaults or make any desired notes.
 
-4. Under “Parameters” for ‘Input files', click the "+" and browse ``data_transfer.sh`` (iplantcollaborative > example_data > nanodj and select ``data_transfer.sh`` script).
+4. Under “Parameters” for ‘Input files', click the "+" and browse ``data_transfer.sh`` (Community Data > cyverse_training > quickstarts > nanodj and select ``data_transfer.sh`` script).
 
 5. Click **Launch Analysis**. You will receive couple of notifications on the bell corresponding to job submission and running with the "Access your running analysis here". 
 
 6. Clicking on the "Access your running analysis" will open the NanoDJ JupyterLab in another tab in the browser after a brief building phase.
 
-.. Note::
-
-  You will be asked to authenticate again to the JupyterLab with your CyVerse username and password
-
-7. Open the Terminal in the main JupyterLab interface (under 'others' section), navigate to the ``vice`` folder and execute the ``data_transfer.sh`` script to initiate the test data downloading process. You will be asked to enter your CyVerse password again to initiate the downloading process.
+7. Open the Terminal in the main JupyterLab interface (under 'other' section), navigate to the ``vice`` folder and execute the ``data_transfer.sh`` script to initiate the test data downloading process. You will be asked to enter your CyVerse password again to initiate the downloading process.
 
 .. code-block:: bash
 
@@ -124,49 +135,37 @@ Input and example data
   bash data_transfer.sh
   Enter your current iRODS password:
 
-8. Finally, once you finish analysis, navigate to the Discovery Environment tab, select the Analysis window and select the analysis, click "save and complete analysis". Upon clicking complete analysis, the analysis will be completed and all the outputs will be brought back to the analysis folder. Alternatively you can use ``iput -rPVT <folder name>`` command to transfer the data back to the data store.
+.. Tip::
+
+   Alternatively you can import your own data using iCommands in terminal or by connecting to your CyVerse Data Store. To connect to your Data Store click on the CyVerse icon on the left side of the JupyterLab workspace and login using your CyVerse credentials.
+
+8. To run the 'demo' analysis close the terminal window and access the notebooks by clicking on the folder icon and navigating to vice > nanodj_webinar_demo. From here you can access each notebook required for the analysis.
+
+9. Finally, once you finish your analysis, navigate back to the Discovery Environment, select the analysis in the Analysis window and click "save and complete analysis" under the ellipsis menu. Upon clicking complete analysis, the analysis will be completed and all the outputs will be brought back to the analysis folder. Alternatively you can use ``iput -rPVT <folder name>`` command to transfer the data back to the data store.
 
 .. Note::
   
-  Currently quick starts uses a reduced test data but if you want to try the full test data, then instead of using ``data_transfer.sh``, use ``data_transfer_full.sh`` script which is in the same folder as the other script.
+  Currently the quickstart uses a reduced test dataset but if you want to try the full test dataset, then instead of using ``data_transfer.sh``, use ``data_transfer_full.sh`` script which is in the same folder as the other script.
 
 ----
 
 Additional information, help
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Full materials for the webinar is available `here <https://wiki.cyverse.org/wiki/pages/viewpage.action?pageId=45322621>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- See the original `JupyterLab quick start <https://learning.cyverse.org/projects/vice/en/latest/user_guide/quick-jupyter.html>`_ 
+- See the original |jupyterlab quick start| 
 
-- See the original `NanoDJ <https://github.com/genomicsITER/NanoDJ>`_ for how to run ONT data analysis
-
-- Search for an answer: `CyVerse Learning Center <http://learning.cyverse.org>`_ or `CyVerse Wiki <https://wiki.cyverse.org>`_
-
-- Contact CyVerse support by clicking the intercom button on the page.
+- See the original |Nano DJ| GitGub for how to run ONT data analysis
 
 ----
 
 **Fix or improve this documentation**
 
-- On Github: `Repo link <https://github.com/CyVerse-learning-materials/nanodj>`_
+- Search for an answer:
+  |CyVerse Learning Center|
+- Ask us for help:
+  click |Intercom| on the lower right-hand side of the page
+- Report an issue or submit a change:
+  |Github Repo Link|
 - Send feedback: `Tutorials@CyVerse.org <Tutorials@CyVerse.org>`_
 
 ----
-
-|Home_Icon|_
-`Learning Center Home`_
-
-.. |nanodj logo| image:: ./img/vice_badge.png
-.. _nanodj logo: https://de.cyverse.org/de/?type=apps&app-id=b0e5bdc4-6226-11e9-a28f-008cfa5ae621&system-id=de
-
-.. |CyVerse logo| image:: ./img/cyverse_rgb.png
-    :width: 500
-    :height: 100
-.. _CyVerse logo: http://learning.cyverse.org/
-.. |Home_Icon| image:: ./img/homeicon.png
-    :width: 25
-    :height: 25
-.. _Home_Icon: http://learning.cyverse.org/
-.. |discovery_enviornment| raw:: html
-
-    <a href="https://de.cyverse.org/de/" target="_blank">Discovery Environment</a>

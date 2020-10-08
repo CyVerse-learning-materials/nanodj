@@ -1,0 +1,40 @@
+.. Comment: Version 2.0, May 2020
+.. Comment: URLS
+
+
+.. Comment: Fix this link if you are using a quicklaunch button
+
+.. |CyVerse_launch| image:: ./img/Powered-By-CyVerse-blue.png
+    :width: 125
+    :height: 20
+    :target: https://de.cyverse.org/de/  target="_blank"
+
+.. |Nano DJ| raw:: html
+
+   <a href="https://github.com/genomicsITER/NanoDJ/" target="blank">Nano DJ</a>
+
+.. |nanodj webinar| raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/TYXcEsCWGI0" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+
+.. |fast5| raw:: html
+
+   <a href="http://bioinformatics.cvr.ac.uk/blog/exploring-the-fast5-format/" target="blank">fast5</a>
+
+.. |nanodj launch| image:: ./img/vice_badge.png
+    :width: 125
+    :height: 20
+    :target: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=1296e3c5-329a-44d6-8c3b-a57a3fe80695&app-id=b0e5bdc4-6226-11e9-a28f-008cfa5ae621  target="_blank"
+
+
+.. |jupyterlab quick start| raw:: html
+
+   <a href="https://learning.cyverse.org/projects/vice/en/latest/user_guide/quick-jupyter.html" target="blank">JupyterLab Quickstart</a>
+
+.. |Github Repo Link| raw:: html
+
+   <a href="https://github.com/CyVerse-learning-materials/nanodj" target="blank">GitHub Repo</a>
+
